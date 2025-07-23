@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - CSInternship</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="login.js"></script>
+</head>
+<body>
+  <div class="form-container">
+    <img src="logo.jpg" alt="CSInternship Logo" class="logo" />
+
+    <h2>Login</h2>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Enter your password" required />
+          <span id="togglePassword" class="toggle-password">👁️</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+
+      <p class="redirect-text">
+        Don't have an account?
+        <a href="signup.html">Sign Up</a>
+      </p>
+    </form>
+  </div>
+</body>
+</html>

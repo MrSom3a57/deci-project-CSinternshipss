@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home - CSInternship</title>
+  <title>Home - CSinternship</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
   <header>
     <nav class="navbar">
       <div class="logo-title">
-        <img src="logo.png" alt="CSInternship Logo" class="logo" />
-        <h1>CSInternship</h1>
+        <img src="logo.png" alt="CSinternship Logo" class="logo" />
+        <h1>CSinternship</h1>
       </div>
       <ul class="nav-links">
         <li><a href="home.html">Home</a></li>
@@ -27,43 +27,31 @@
   <!-- Hero Section -->
   <main>
     <section class="hero">
-      <h2>Welcome to CSInternship</h2>
+      <h2>Welcome to CSinternship</h2>
       <p>Empowering future coders through practical learning paths and real-world projects.</p>
     </section>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
-    <!-- About Us Section -->
-    <section id="about" class="section">
-      <h2>About Us</h2>
-      <p>
-        CSInternship is a platform built to help young learners grow in the world of computer science.
-        Our goal is to provide guided tracks, challenges, and resources to master your tech journey.
-      </p>
-    </section>
 
-    <!-- Tracks Section -->
-    <section id="tracks" class="section">
-      <h2>Available Tracks</h2>
-      <ul class="track-list">
-        <li>🌐 Web Development</li>
-        <li>🤖 Artificial Intelligence</li>
-        <li>🛡️ Cyber Security</li>
-        <li>📱 Mobile Apps</li>
-        <li>🎮 Game Development</li>
-      </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <h2>Contact Us</h2>
-      <p>Email: contact@csinternship.com</p>
-      <p>Instagram: @csinternship</p>
-      <p>Phone: +20 123 456 7890</p>
-    </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 CSInternship. All rights reserved.</p>
+    <p>&copy; 2025 CSinternship. All rights reserved.</p>
   </footer>
   <script>
   const links = document.querySelectorAll('.nav-links a');
@@ -76,5 +64,26 @@
     }
   });
   </script>
+  <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>

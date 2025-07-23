@@ -5,15 +5,23 @@ document.getElementById("togglePassword").addEventListener("click", function () 
   this.textContent = type === "password" ? "👁️" : "🙈";
 });
 
-// Example fake login logic
 document.getElementById("login-form").addEventListener("submit", function (e) {
   e.preventDefault();
+
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
 
-  if (email && password.length >= 6 && email.includes("@")) {
+  const storedUser = JSON.parse(localStorage.getItem("csintern-user"));
+
+  if (!storedUser) {
+    alert("No account found. Please sign up first.");
+    return;
+  }
+
+  if (storedUser.email === email && storedUser.password === password) {
     alert("Logged in successfully!");
-    window.location.href = "home.html"; // redirect to homepage
+    localStorage.setItem("csintern-loggedin", "true");
+    window.location.href = "home.html";
   } else {
     alert("Invalid email or password.");
   }

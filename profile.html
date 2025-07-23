@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Profile - CSInternship</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="profile.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-title">
+      <img src="logo.png" alt="CSInternship Logo" class="logo" />
+      <h1>CSInternship</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <h2>Your Profile</h2>
+    <p><strong>Name:</strong> <span id="profile-name">Loading...</span></p>
+    <p><strong>Email:</strong> <span id="profile-email">Loading...</span></p>
+    <p><strong>Age:</strong> <span id="profile-age">Loading...</span></p>
+    <p><strong>Achievements:</strong> <span id="profile-achievements">None yet</span></p>
+    <button class="logout-btn" id="logout-btn">Logout</button>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 CSInternship. All rights reserved.</p>
+  </footer>
+  <script>
+  const links = document.querySelectorAll('.nav-links a');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+  });
+  </script>
+</body>
+</html>

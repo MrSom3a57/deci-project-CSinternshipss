@@ -9,21 +9,35 @@
 }
 
 body {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to right, #000428, #004e92);
   color: white;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px; /* space for fixed navbar */
 }
 
 /* --------------------------------
-   Container & Layout
+   Animations
+-------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------
+   Layout & Containers
 -------------------------------- */
 .container {
   text-align: center;
   animation: fadeIn 1.5s ease-in-out;
-  padding: 20px;
+  padding: 180px 20px;
 }
 
 .form-container {
@@ -33,6 +47,7 @@ body {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  margin: auto;
   text-align: center;
 }
 
@@ -44,6 +59,102 @@ body {
   margin-bottom: 24px;
 }
 
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .logo {
+  width: 40px;
+}
+
+/* --------------------------------
+   Navbar
+-------------------------------- */
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #005F99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1d9cbe;
+}
+
+/* --------------------------------
+   Hero Section
+-------------------------------- */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeIn 1s ease;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* --------------------------------
+   Content Sections
+-------------------------------- */
+.section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  animation: fadeIn 1.5s ease;
+}
+
+.cont {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.track-list li {
+  margin: 10px 0;
+}
+
 /* --------------------------------
    Typography
 -------------------------------- */
@@ -52,9 +163,14 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
 p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   opacity: 0.85;
 }
 
@@ -81,6 +197,8 @@ p {
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -88,7 +206,7 @@ p {
 }
 
 /* --------------------------------
-   Form Groups
+   Form Inputs
 -------------------------------- */
 .form-group {
   margin-bottom: 20px;
@@ -125,7 +243,7 @@ p {
 }
 
 /* --------------------------------
-   Select Dropdown (Track)
+   Select Dropdown
 -------------------------------- */
 select {
   width: 100%;
@@ -154,7 +272,7 @@ option {
 }
 
 /* --------------------------------
-   Redirect Text (Login ↔ Sign Up)
+   Redirect Text
 -------------------------------- */
 .redirect-text {
   margin-top: 20px;
@@ -167,15 +285,35 @@ option {
 }
 
 /* --------------------------------
-   Animations
+   Footer
 -------------------------------- */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+.logout-btn {
+  background-color: #e46658; /* Red */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.nav-links a.active {
+  color: #00c6ff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
 }

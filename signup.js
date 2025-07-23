@@ -13,9 +13,8 @@ document.getElementById("signup-form").addEventListener("submit", function (e) {
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirm-password").value;
   const age = parseInt(document.getElementById("age").value);
-  const track = document.getElementById("track").value;
 
-  if (!name || !email || !password || !confirmPassword || !age || !track) {
+  if (!name || !email || !password || !confirmPassword || !age) {
     alert("Please fill all required fields.");
     return;
   }
@@ -35,6 +34,15 @@ document.getElementById("signup-form").addEventListener("submit", function (e) {
     return;
   }
 
+  // Save user data in localStorage
+  const user = {
+    name,
+    email,
+    password,
+    age,
+  };
+  localStorage.setItem("csintern-user", JSON.stringify(user));
+
   alert("Account created successfully!");
-  window.location.href = "login.html";
+  window.location.href = "home.html";
 });

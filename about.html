@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - CSInternship</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-title">
+        <img src="logo.png" alt="CSInternship Logo" class="logo" />
+        <h1>CSInternship</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
+
+  <section class="section">
+    <h1>About CSInternship</h2>
+    <p>
+      At CSInternship, we believe that internships are more than just resume boosts—they’re transformative experiences that shape the next generation of computer scientists.
+    </p>
+    <h2>🎯 Our Mission</h2>
+    <p>We’re dedicated to <b>bridging the gap between academia and industry</b> by connecting students and recent graduates with hands-on, real-world tech internships. Whether you're building mobile apps, diving into machine learning, or testing cutting-edge software, we're here to help you gain:</p>
+    <p>1-Practical experience: Apply your classroom knowledge to real-world projects—just what industry demands.<br>
+    2-Skill development: Learn advanced tools and languages while refining communication, teamwork, and problem-solving talents.<br>
+    3-Industry exposure & mentorship: Get insider access to growing startups and top-tier companies, supported by close mentorship.<br>
+    4-Career advancement: Enhance your professional prospects—internships often lead to full-time offers.<br></p>
+    <h2>🎯 What We Offer</h2>
+    <p>1-Curated Internship Listings: Access openings from global startups to tech giants like Google, Microsoft, and IBM.<br>
+    2-Tailored Mentorship: Connect with experienced professionals who guide you through project hurdles and career growth.<br>
+    3-Career Growth Resources: From resume tips to interview prep and portfolio reviews, we equip you with what you need to succeed.<br>
+    4-Community & Networking: Join a supportive community where peers, mentors, and alums collaborate, share projects, and celebrate milestones—just like other successful intern hubs.<br></p>
+    <h2>🎯 Why Choose Us?</h2>
+    <p>1-Hands-on Learning: Dive into meaningful projects, from front-end development to data science and cybersecurity.<br>
+    2-Top-Tier Opportunities: Whether you're targeting Big Tech or innovative startups, our listings feature a diverse range of high-impact roles.<br>
+    3-Structured Support: Benefit from continuous mentorship, milestone check-ins, and expert feedback to ensure your success.<br>
+    4-Pathway to Careers: Many of our interns have turned their experiences into full-time employment—just as industry-leading programs emphasize.<br></p>
+    <p><b>Join Us</b> to gain practical experience, grow professionally, and kickstart your journey in computer science. Whether you're building your portfolio or landing coveted tech roles, csinternship is here to support your ambition every step of the way.</p>
+</section>
+
+  <footer class="footer">
+    <p>&copy; 2025 CSInternship. All rights reserved.</p>
+  </footer>
+  <script>
+  const links = document.querySelectorAll('.nav-links a');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+  });
+  </script>
+</body>
+</html>

@@ -327,10 +327,15 @@ option {
 .dropbtn {
   background-color: #3498DB;
   color: white;
-  padding: 16px;
-  font-size: 16px;
+  padding: 30px;
+  margin-left:200px;
+  margin-top: auto;
+  margin-right: 300px;
+  font-size: 30px;
   border: none;
   cursor: pointer;
+  position: center;
+  align: center;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -362,96 +367,7 @@ option {
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
-
-
-/* --------------------------------
-   Internship Page Styles
--------------------------------- */
-body{
-      background: linear-gradient(to right, #000428, #004e92);
-}
-.container {
-  display: flex;
-  height: calc(100vh - 160px); /* minus navbar + footer */
-  padding: 40px;
-  gap: 40px;
-  animation: fadeIn 1.2s ease;
-}
-
-.internship-list {
-  width: 35%;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  overflow-y: auto;
-  max-height: 100%;
-}
-
-.internship-list div {
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 16px;
-  margin-bottom: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.internship-list div:hover {
-  background-color: rgba(0, 198, 255, 0.2);
-}
-
-.internship-list h3 {
-  font-size: 1.2rem;
-  color: #00c6ff;
-  margin-bottom: 6px;
-}
-
-.internship-list p {
-  font-size: 0.95rem;
-  color: #ccc;
-  opacity: 0.8;
-}
-
-.internship-details {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.07);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  overflow-y: auto;
-  max-height: 100%;
-  animation: fadeIn 1s ease;
-}
-
-.internship-details h2 {
-  color: #00c6ff;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.internship-details p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: #e0e0e0;
-}
-
-.internship-details img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 198, 255, 0.3);
-}
-
-footer {
-  background-color: #002f4b;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  font-size: 0.9rem;
-  margin-top: auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+.dropdown-content {
+  position: absolute;
+  z-index: 1000; /* Ensure it's above other elements */
 }
